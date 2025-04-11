@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Tenor+Sans&family=Inter&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+
+    <style>
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    font-family: 'Tenor Sans', sans-serif;
+    background-color: #333333;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+a:hover {
+    color: #5ce1e6;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0.8rem 1.5rem;
+}
+
+.logo1 {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.logo1 img {
+    width: 120px;
+    margin: 0;
+}
+
+.logo1 p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    font-family: "Cinzel Decorative", cursive;
+    font-style: normal;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+.navigation li a {
+    display: inline-block;
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navigation li a:hover {
+    color: #5ce1e6;
+    border-bottom: 2px solid #5ce1e6;
+    transform: translateY(-3px);
+}
+
+.project-nav {
+    padding: 30px 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.project-nav h2 {
+    font-family: "Cinzel Decorative", cursive;
+    font-size: 2rem;
+    color: #5ce1e6;
+    margin-bottom: 10px;
+}
+
+.project-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-nav ul li a {
+    color: #fff;
+    border: 1px solid #5ce1e6;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.project-nav ul li a:hover {
+    background-color: #5ce1e6;
+    color: #111;
+}
+
+.gallery-section {
+    padding: 40px 20px;
+}
+
+.gallery-section h2 {
+    font-family: "Cinzel Decorative", cursive;
+    color: #5ce1e6;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    animation: fadeInUp 1s ease-in-out;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(92, 225, 230, 0.4);
+}
+
+.top {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #5ce1e6;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px transparent;
+    animation: fadeInUp 1s ease-in-out;
+    cursor: pointer;
+}
+
+.top:hover {
+    background-color: #5ce1e6;
+    color: #111;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #5ce1e666;
+}
+
+.back-to-top {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 20px;
+}
+
+#about-me {
+    display: flex;
+    background-color: #333333;
+    padding: 40px 2px;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    color: white;
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.about-text h1 {
+    color: #5ce1e6;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel Decorative', cursive;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Tenor Sans', serif;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.lance, .wave {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lance-img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 50% 50% 55% 50%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.wave-img {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+    padding: 20px;
+    gap: 20px;
+}
+
+.footer > div {
+    flex: 1 1 250px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.footer h3 {
+    font-family: "Cinzel Decorative", cursive;
+    color: #5ce1e6;
+    margin-bottom: 10px;
+}
+
+.social-links .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.account {
+    font-family: 'Tenor Sans', serif;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-info, .newsletter {
+    font-family: 'Tenor Sans', serif;
+}
+
+.newsletter p {
+    font-family: "Cinzel Decorative", cursive;
+    font-size: 1.1rem;
+    color: #5ce1e6;
+    margin-bottom: 10px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 8px 12px;
+    width: 220px;
+    border: 1px solid #5ce1e6;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #111;
+}
+
+.newsletter input:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 6px #00ffff88;
+}
+
+.newsletter button {
+    padding: 8px 14px;
+    background-color: transparent;
+    color: #5ce1e6;
+    border: 2px solid #5ce1e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #5ce1e6;
+    color: #111;
+    transform: scale(1.05);
+}
+
+.copy-rights {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    font-family: "Cinzel Decorative", cursive;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!--Header-->
+<header class="header" id="header">
+
+    <div class="logo1">
+
+        <a href="home.html">
+
+            <img src="img/plogo.png" alt="logo">
+
+        </a>
+
+        <a href="home.html">
+
+            <p>Lance's <br> Photography</p>
+
+        </a>
+
+    </div>
+
+    <nav>
+
+      <ul class="navigation">
+
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+
+      </ul>
+
+    </nav>
+
+</header>
+
+<!--Gallery Navigation-->
+<section class="project-nav">
+
+    <a href="portfolio.html">
+    <h2>Projects</h2>
+
+</a>
+
+    <ul>
+
+        <li><a href="#nature">Nature</a></li>
+        <li><a href="#landscapes">Landscapes</a></li>
+
+    </ul>
+
+</section>
+
+<!--Gallery-->
+<main>
+
+<section id="nature" class="gallery-section">
+
+    <a href="#nature">
+
+        <h2>Nature</h2>
+
+    </a>
+
+        <div class="gallery-grid">
+            
+            <img src="portfolio-img/nature/n1.jpg" alt="Nature 1">
+            <img src="portfolio-img/nature/n2.jpg" alt="Nature 2">
+            <img src="portfolio-img/nature/n3.jpg" alt="Nature 3">
+            <img src="portfolio-img/nature/n4.jpg" alt="Nature 4">
+            <img src="portfolio-img/nature/n5.jpg" alt="Nature 5">
+            <img src="portfolio-img/nature/n6.jpg" alt="Nature 6">
+            <img src="portfolio-img/nature/n7.jpg" alt="Nature 7">
+            <img src="portfolio-img/nature/n8.jpg" alt="Nature 8">
+            <img src="portfolio-img/nature/n9.jpg" alt="Nature 9">
+            <img src="portfolio-img/nature/n10.jpg" alt="Nature 10">
+
+        </div>
+
+</section>
+
+<section id="landscapes" class="gallery-section">
+
+    <a href="#landscapes">
+
+        <h2>Landscapes</h2>
+
+    </a>
+
+        <div class="gallery-grid">
+
+            <img src="portfolio-img/landscapes/l1.jpg" alt="Landscape 1">
+            <img src="portfolio-img/landscapes/l2.jpg" alt="Landscape 2">
+            <img src="portfolio-img/landscapes/l3.jpg" alt="Landscape 3">
+            <img src="portfolio-img/landscapes/l4.jpg" alt="Landscape 4">
+            <img src="portfolio-img/landscapes/l5.jpg" alt="Landscape 5">
+            <img src="portfolio-img/landscapes/l7.jpg" alt="Landscape 7">
+            <img src="portfolio-img/landscapes/l8.jpg" alt="Landscape 8">
+            <img src="portfolio-img/landscapes/l9.jpg" alt="Landscape 9">
+            <img src="portfolio-img/landscapes/l11.jpg" alt="Landscape 11">
+            <img src="portfolio-img/landscapes/l12.jpg" alt="Landscape 12">
+            <img src="portfolio-img/landscapes/l13.jpg" alt="Landscape 13">
+            <img src="portfolio-img/landscapes/l15.jpg" alt="Landscape 15">
+            <img src="portfolio-img/landscapes/l16.jpg" alt="Landscape 16">
+            <img src="portfolio-img/landscapes/l17.jpg" alt="Landscape 17">
+            <img src="portfolio-img/landscapes/l18.jpg" alt="Landscape 18">
+        
+        </div>
+
+        <div class="back-to-top">
+
+            <a href="#header" class="top" >Back to Top</a>
+
+        </div>
+
+</section>
+
+</main>
+
+<!--Footer-->
+<footer class="footer">
+
+    <div class="social-links">
+
+        <a href="https://www.instagram.com/lnzz.fz/" target="_blank">
+
+            <img src="img/profile.jpg" alt="profile" class="profile">
+
+        </a>
+
+            <p class="account">@lnzz.fz</p>
+
+            <div class="social-icons">
+                
+                <a href="https://x.com/lnzz05/" target="_blank">
+
+                    <img src="img/x.jpg" alt="twitter">
+
+                </a>
+
+                <a href="https://www.facebook.com/llnz02/" target="_blank">
+
+                    <img src="img/facebook.jpg" alt="facebook">
+
+                </a>
+
+                <a href="https://www.instagram.com/lnzz.fz/" target="_blank">
+
+                    <img src="img/instagram.jpg" alt="instagram">
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="contact-info">
+            
+            <h3>Contact</h3>
+            <p>Email:<a href="mailto:lancefortaliza22@gmail.com"> lancefortaliza22@gmail.com</a></p>
+            <p>Phone: +63 967 283 4106</p>
+
+        </div>
+
+        <div class="newsletter">
+
+            <p>Get the latest photo drops!</p>
+
+                <form>
+
+                    <input type="email" placeholder="Enter your email">
+                    <button class="subscribe">Subscribe</button>
+                    
+                </form>
+
+        </div>
+
+</footer>
+
+    <div class="copy-rights">
+
+        <p>LEANDRE LANCE FORTALIZA © 2025. ALL RIGHTS RESERVED.</p>
+
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Tenor+Sans&family=Inter&display=swap" rel="stylesheet">
+    <title>About Me</title>
+
+    <style>
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tenor Sans', sans-serif;
+    background-color: #333333;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+a:hover {
+    color: #5ce1e6;
+}
+
+/*----------Header----------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0.8rem 1.5rem;
+}
+
+.logo1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo1 img {
+    width: 120px;
+    margin: 0;
+}
+
+.logo1 p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-family: "Cinzel Decorative", cursive;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+.navigation li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+.navigation li a:hover {
+    color: #5ce1e6;
+    border-bottom: 2px solid #5ce1e6;
+    transform: translateY(-3px);
+}
+
+/*----------About----------*/
+#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    min-height: 500px;
+    padding: 40px 2px;
+    background-color: #333333;
+}
+
+.about-text {
+    flex: 1;
+    width: 600px;
+    text-align: left;
+    margin-left: 100px;
+    color: white;
+}
+
+.about-text h1 {
+    color: #5ce1e6;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel Decorative', cursive;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Tenor Sans', serif;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.lance, .wave {
+    flex: 1;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lance-img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50% 55% 55% 50%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.wave-img {
+    width: 500px;
+    height: 281px; /* aspect ratio 16:9 */
+    object-fit: cover;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/*----------Footer----------*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 20px;
+    gap: 20px;
+}
+
+.footer > div {
+    width: 300px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.footer h3 {
+    font-family: "Cinzel Decorative", cursive;
+    color: #5ce1e6;
+    margin-bottom: 10px;
+}
+
+.account, .contact-info, .newsletter {
+    font-family: 'Tenor Sans', serif;
+}
+
+.social-links .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.newsletter p {
+    font-family: "Cinzel Decorative", cursive;
+    font-size: 1.1rem;
+    color: #5ce1e6;
+    margin-bottom: 10px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 8px 12px;
+    width: 220px;
+    border: 1px solid #5ce1e6;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #111;
+}
+
+.newsletter input:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 6px #00ffff88;
+}
+
+.newsletter button {
+    padding: 8px 14px;
+    background-color: transparent;
+    color: #5ce1e6;
+    border: 2px solid #5ce1e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #5ce1e6;
+    color: #111;
+    transform: scale(1.05);
+}
+
+.copy-rights {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    font-family: "Cinzel Decorative", cursive;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!--Header-->
+<header class="header">
+
+    <div class="logo1">
+
+        <a href="home.html">
+                
+            <img src="img/plogo.png" alt="logo">
+
+        </a>
+
+        <a href="home.html">
+
+            <p>Lance's <br> Photography</p>
+
+        </a>
+            
+    </div>
+
+    <nav>
+
+        <ul class="navigation">
+
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!--Section-->
+<section id="about-me">
+
+    <div class="about-text">
+
+        <h1>About Me</h1>
+
+            <p>
+                Hi, I'm Leandre Lance Fortaliza. I'm a photographer from Quezon City with a deep love for nature and landscapes. What started with capturing the beauty of the natural world evolved into exploring the vastness of landscapes. 
+            </p>
+            
+            <p>
+                My work aims to convey the tranquility and awe I experience in these stunning environments.
+            </p>
+            
+
+    </div>
+
+    <div class="lance">
+
+        <img src="img/lancefortaliza.jpg" alt="Lance Fortaliza" class="lance-img">
+
+    </div>
+
+    <div class="wave">
+
+        <img src="img/wave.jpg" alt="Wave" class="wave-img">
+
+    </div>
+
+</section>
+
+<!--Footer-->
+<footer class="footer">
+
+    <div class="social-links">
+
+        <a href="https://www.instagram.com/lnzz.fz/" target="_blank">
+
+            <img src="img/profile.jpg" alt="profile" class="profile">
+
+        </a>
+
+        <p class="account">@lnzz.fz</p>
+
+        <div class="social-icons">
+
+            <a href="https://x.com/lnzz05/" target="_blank">
+
+                <img src="img/x.jpg" alt="twitter">
+
+            </a>
+
+            <a href="https://www.facebook.com/llnz02/" target="_blank">
+
+                <img src="img/facebook.jpg" alt="facebook">
+
+            </a>
+
+            <a href="https://www.instagram.com/lnzz.fz/" target="_blank">
+
+                <img src="img/instagram.jpg" alt="instagram">
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="contact-info">
+
+        <h3>Contact</h3>
+        <p>Email:<a href="mailto:lancefortaliza22@gmail.com"> lancefortaliza22@gmail.com</a></p>
+        <p>Phone: +63 967 283 4106</p>
+      
+    </div>
+
+    <div class="newsletter">
+
+        <p>Get the latest photo drops!</p>
+
+        <form>
+
+            <input type="email" placeholder="Enter your email">
+            <button class="subscribe">Subscribe</button>
+
+        </form>
+
+    </div>
+
+</footer>
+
+    <div class="copy-rights">
+
+        <p>LEANDRE LANCE FORTALIZA © 2025. ALL RIGHTS RESERVED.</p>
+
+    </div>
+
+</body>
+
+</html>

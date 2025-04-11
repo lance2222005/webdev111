@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Tenor+Sans&family=Inter&display=swap" rel="stylesheet">
+
+    <style>
+
+    /*----------Header----------*/
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 1440px;
+    font-family: 'Tenor Sans', sans-serif;
+    background-color: #333333;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+a:hover {
+    color: #5ce1e6;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+}
+
+.logo1 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo1 img {
+    width: 120px;
+    margin: 0;
+}
+
+.logo1 p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    font-family: "Cinzel Decorative", cursive;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 32px;
+    flex-wrap: nowrap;
+}
+
+.navigation li a {
+    display: inline-block;
+    font-size: 16px;
+    transition: transform 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navigation li a:hover {
+    color: #5ce1e6;
+    border-bottom: 2px solid #5ce1e6;
+    transform: translateY(-3px);
+}
+
+.get-in-touch {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #222;
+    padding: 20px;
+    min-height: 500px;
+    width: 100%;
+}
+
+.get-in-touch .left,
+.get-in-touch .right {
+    width: 50%;
+    padding: 20px;
+}
+
+.get-in-touch .right img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.get-in-touch h1 {
+    font-family: "Cinzel Decorative", cursive;
+    font-size: 48px;
+    color: #5ce1e6;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.get-in-touch p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.leaf {
+    width: 250px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.details b {
+    display: block;
+    font-family: 'Tenor Sans', sans-serif;
+    color: #5ce1e6;
+    margin-top: 10px;
+}
+
+.details, .details p, .details a {
+    margin: 4px 0;
+    color: white;
+    font-family: 'Tenor Sans', sans-serif;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.text-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.text-row h1 {
+    margin: 0;
+    font-family: "Cinzel Decorative", cursive;
+}
+
+.text-row p {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+.image-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+.image-row .leaf {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-row .details {
+    font-size: 16px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: black;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer > div {
+    width: 33%;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.footer h3 {
+    font-family: "Cinzel Decorative", cursive;
+    color: #5ce1e6;
+    margin-bottom: 10px;
+}
+
+.social-links .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.account {
+    font-family: 'Tenor Sans', serif;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-info,
+.newsletter {
+    font-family: 'Tenor Sans', serif;
+}
+
+.newsletter p {
+    font-family: "Cinzel Decorative", cursive;
+    font-size: 18px;
+    color: #5ce1e6;
+    margin-bottom: 10px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.newsletter input {
+    padding: 8px 12px;
+    width: 220px;
+    border: 1px solid #5ce1e6;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #111;
+}
+
+.newsletter input:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 6px #00ffff88;
+}
+
+.newsletter button {
+    padding: 8px 14px;
+    background-color: transparent;
+    color: #5ce1e6;
+    border: 2px solid #5ce1e6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #5ce1e6;
+    color: #111;
+    transform: scale(1.05);
+}
+
+.copy-rights {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
+    font-family: "Cinzel Decorative", cursive;
+    width: 100%;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!--Header-->
+<header class="header">
+
+    <div class="logo1">
+
+        <a href="home.html">
+
+            <img src="img/plogo.png" alt="logo">
+
+         </a>
+
+        <a href="home.html">
+
+            <p>Lance's <br> Photography</p>
+
+        </a>
+
+    </div>
+
+        <nav>
+
+            <ul class="navigation">
+
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+
+            </ul>
+
+        </nav>
+
+</header>
+
+<!--Contact Section-->
+<section class="get-in-touch">
+
+    <div class="left">
+
+        <div class="text-row">
+
+            <h1>GET IN <br> TOUCH</h1>
+            <p>Thank you for your interest in working <br> with me! I can't wait to meet you.</p>
+
+        </div>
+            
+        <div class="image-row">
+
+            <img src="portfolio-img/nature/n1.jpg" alt="Leaf" class="leaf">
+
+            <div class="details">
+
+                <b>Address</b>
+                <p>6th Alley Kalayaan B St.<br>Batasan Hills Quezon City</p>
+
+                <b>Email</b>
+                <p><a href="mailto:lancefortaliza22@gmail.com">lancefortaliza22@gmail.com</a></p>
+
+                <b>Phone</b>
+                <p>+63 967 2834 106</p>
+
+            </div>
+
+        </div>
+            
+    </div>
+
+    <div class="right">
+
+        <img src="img/contactimage.jpg" alt="contact">
+
+    </div>
+
+</section>
+
+<!--Footer-->
+<footer class="footer">
+
+    <div class="social-links">
+
+        <a href="https://www.instagram.com/lnzz.fz/" target="_blank">
+
+            <img src="img/profile.jpg" alt="profile" class="profile">
+
+        </a>
+
+            <p class="account">@lnzz.fz</p>
+
+        <div class="social-icons">
+
+            <a href="https://x.com/lnzz05/" target="_blank"><img src="img/x.jpg" alt="twitter"></a>
+            
+            <a href="https://www.facebook.com/llnz02/" target="_blank"><img src="img/facebook.jpg" alt="facebook"></a>
+
+            <a href="https://www.instagram.com/lnzz.fz/" target="_blank"><img src="img/instagram.jpg" alt="instagram"></a>
+
+        </div>
+
+    </div>
+
+    <div class="contact-info">
+
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:lancefortaliza22@gmail.com">lancefortaliza22@gmail.com</a></p>
+        <p>Phone: +63 967 283 4106</p>
+
+    </div>
+
+    <div class="newsletter">
+
+        <p>Get the latest photo drops!</p>
+
+            <form>
+
+                <input type="email" placeholder="Enter your email">
+                <button class="subscribe">Subscribe</button>
+
+            </form>
+
+     </div>
+
+</footer>
+
+    <div class="copy-rights">
+
+        <p>LEANDRE LANCE FORTALIZA © 2025. ALL RIGHTS RESERVED.</p>
+        
+    </div>
+
+</body>
+
+</html>
